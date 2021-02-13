@@ -57,7 +57,7 @@
                 </tr>
             </table>
             <button type="submit">Submit</button>
-            <button href="OTclaimForm.html">Recalculate</button>
+            <a href="OTclaimForm.html"><input type="button" value="Recalculate"></a>
         </form>
     </body>
 </html>
