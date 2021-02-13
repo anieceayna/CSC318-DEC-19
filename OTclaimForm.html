@@ -10,25 +10,25 @@
                     <tr>
                         <td> Staff Number: </td>
                         <td>
-                            <input type="text" required>
+                            <input name="staff_number" type="number" onchange="checkStaffNumeric(this.value)" required>
                         </td>
                     </tr>
                     <tr>
                         <td> Name: </td>
                         <td>
-                            <input type="text" required>
+                            <input name="staff_name" type="text" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Overime (hours): </td>
                         <td>
-                            <input type="number" required>
+                            <input name="staff_ot" id="ot" type="text" onchange="checkNumeric(this.value)" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Position</td>
                         <td>
-                            <select>
+                            <select name="staff_position">
                                 <option value="Manager">Manager</option>
                                 <option value="Executive">Executive</option>
                                 <option value="Non-Executive">Non-Executive</option>
@@ -40,15 +40,15 @@
                         <td>
                             <table>
                                 <td>
-                                    <input type="radio" value="A" id="A">
+                                    <input name="staff_group" type="radio" value="A" id="A">
                                     <label for="A">A</label> 
                                 </td>
                                 <td>
-                                    <input type="radio" value="B" id="B">
+                                    <input name="staff_group" type="radio" value="B" id="B">
                                     <label for="B">B</label>                            
                                 </td>
                                 <td>
-                                    <input type="radio" value="C" id="C">
+                                    <input name="staff_group" type="radio" value="C" id="C">
                                     <label for="C">C</label>                            
                                 </td>
                             </table>                                                      
@@ -60,4 +60,16 @@
             <button type="reset">Clear Form</button>
         </form>
     </body>
+    <script>
+        function checkNumeric(otvalue)
+        {
+            if(isNaN(otvalue) == true)
+                alert("Please enter the correct number")
+        }
+        function checkStaffNumeric(otvalue)
+        {
+            if(isNaN(otvalue) == true)
+                alert("Please enter the correct number")
+        }
+    </script>
 </html>
