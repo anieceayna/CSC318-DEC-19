@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>OT CLAIM FORM</title>
+    </head>
+    <body>
+        <form name="OTclaimForm" action="OTclaimCalculate.php" method="POST">
+            <fieldset>
+                <legend>Enter your information in the form below: </legend>
+                <table>
+                    <tr>
+                        <td> Staff Number: </td>
+                        <td>
+                            <input type="text" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Name: </td>
+                        <td>
+                            <input type="text" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Overime (hours): </td>
+                        <td>
+                            <input type="number" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Position</td>
+                        <td>
+                            <select>
+                                <option value="Manager">Manager</option>
+                                <option value="Executive">Executive</option>
+                                <option value="Non-Executive">Non-Executive</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Group</td>
+                        <td>
+                            <table>
+                                <td>
+                                    <input type="radio" value="A" id="A">
+                                    <label for="A">A</label> 
+                                </td>
+                                <td>
+                                    <input type="radio" value="B" id="B">
+                                    <label for="B">B</label>                            
+                                </td>
+                                <td>
+                                    <input type="radio" value="C" id="C">
+                                    <label for="C">C</label>                            
+                                </td>
+                            </table>                                                      
+                        </td>                        
+                    </tr>
+                </table>
+            </fieldset>
+            <button type="submit">Submit</button>
+            <button type="reset">Clear Form</button>
+        </form>
+    </body>
+</html>
